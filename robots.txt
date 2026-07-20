@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sceuz.github.io/sitemap.xml
