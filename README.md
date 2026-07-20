@@ -18,6 +18,7 @@ Then open `http://localhost:8000`.
 - `styles.css` contains the responsive design system.
 - `script.js` adds navigation, filters, reveal transitions, the ML pipeline interaction and email copying.
 - `favicon.svg` is the site icon.
+- `assets/` contains the biped robot video, humanoid robot photo and bionic hand render used in the robotics section.
 
 ## Content rules
 
