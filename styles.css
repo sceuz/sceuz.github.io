@@ -149,9 +149,10 @@ main section[id] { scroll-margin-top: 84px; }
 .timeline-item ul { margin: 22px 0 0; padding-left: 20px; color: var(--muted); }
 .timeline-item li + li { margin-top: 9px; }
 
-.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-.skill-card { min-height: 310px; display: flex; flex-direction: column; padding: 28px; }
-.skill-card + .skill-card { border-left: 1px solid var(--line); }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.skill-card { min-height: 310px; display: flex; flex-direction: column; padding: 28px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.skill-card:nth-child(-n+3) { border-top: 0; }
+.skill-card:nth-child(3n+1) { border-left: 0; }
 .skill-card > span { color: var(--copper); font: 500 11px "IBM Plex Mono", monospace; }
 .skill-card h3 { margin-top: auto; font-size: 25px; }
 .skill-card p { margin-bottom: 0; font-size: 15px; }
@@ -221,8 +222,9 @@ main section[id] { scroll-margin-top: 84px; }
   .section-title-sticky { position: static; }
   .case-featured { min-height: 680px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .skill-card:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
-  .skill-card:nth-child(4) { border-top: 1px solid var(--line); }
+  .skill-card:nth-child(n) { border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .skill-card:nth-child(-n+2) { border-top: 0; }
+  .skill-card:nth-child(2n+1) { border-left: 0; }
   .robot-project, .robot-project-photo { grid-template-columns: minmax(0, 1fr); }
   .robot-project-photo .robot-copy { order: 2; }
   .robot-project-photo .robot-media { order: 1; }
@@ -255,7 +257,8 @@ main section[id] { scroll-margin-top: 84px; }
   .case-featured { grid-row: auto; min-height: auto; }
   .backend-cards { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
-  .skill-card + .skill-card, .skill-card:nth-child(3) { border-top: 1px solid var(--line); border-left: 0; }
+  .skill-card:nth-child(n) { border-top: 1px solid var(--line); border-left: 0; }
+  .skill-card:first-child { border-top: 0; }
   .skill-card { min-height: 250px; }
   .contact-line { grid-template-columns: 78px minmax(0, 1fr) auto; }
   .contact-line strong { overflow-wrap: anywhere; }
