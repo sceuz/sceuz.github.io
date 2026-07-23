@@ -1,6 +1,6 @@
 # Portfolio of Aizat Garafutdinov
 
-Static one-page portfolio focused on ML Engineering, Computer Vision, signal processing and scientific work, with Python Backend presented as an integration skill.
+Static one-page portfolio focused on ML Engineering, Computer Vision, signal processing and scientific work, with Python Backend presented as an integration skill. The interface supports Russian and English as well as light and dark themes.
 
 ## Run locally
 
@@ -17,6 +17,7 @@ Then open `http://localhost:8000`.
 - `index.html` contains semantic content, metadata and JSON-LD.
 - `styles.css` contains the responsive design system.
 - `script.js` adds navigation, reveal transitions, the ML pipeline interaction and email copying.
+- `preferences.js` controls the language and theme preferences.
 - `favicon.svg` is the site icon.
 - `assets/` contains the humanoid robot video, biped robot photo, bionic hand render and vector previews used on project cards.
 

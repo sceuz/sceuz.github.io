@@ -12,12 +12,29 @@
   <meta name="twitter:card" content="summary">
   <title>Айзат Гарафутдинов — AI / ML Engineer</title>
   <link rel="canonical" href="https://sceuz.github.io/">
+  <link rel="alternate" hreflang="ru" href="https://sceuz.github.io/">
+  <link rel="alternate" hreflang="en" href="https://sceuz.github.io/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://sceuz.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;family=Inter+Tight:wght@500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
-  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="styles.css?v=7">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      const queryLanguage = new URLSearchParams(location.search).get('lang');
+      const savedLanguage = localStorage.getItem('portfolio-language');
+      document.documentElement.dataset.theme = savedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.language = queryLanguage === 'en' || queryLanguage === 'ru' ? queryLanguage : (savedLanguage || 'ru');
+      document.documentElement.lang = document.documentElement.dataset.language;
+      document.querySelector('meta[name="theme-color"]').content = document.documentElement.dataset.theme === 'dark' ? '#101519' : '#f3f1ec';
+    } catch {
+      document.documentElement.dataset.theme = 'light';
+      document.documentElement.dataset.language = 'ru';
+    }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,10 +57,6 @@
         <span class="brand-mark">AG</span>
         <span class="brand-copy">Айзат Гарафутдинов<small>AI / ML Engineer</small></span>
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-        <span></span><span></span><span></span>
-        <span class="sr-only">Открыть меню</span>
-      </button>
       <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav>
         <a href="#ai-systems">AI Systems</a>
         <a href="#robotics">Роботы</a>
@@ -53,7 +66,21 @@
         <a href="#skills">Навыки</a>
         <a href="#contacts">Контакты</a>
       </nav>
+      <div class="nav-tools">
+        <button class="language-toggle" type="button" aria-label="Switch to English" data-language-toggle>
+          <span aria-hidden="true" data-language-label>EN</span>
+        </button>
+        <button class="theme-toggle" type="button" aria-label="Включить тёмную тему" aria-pressed="false" data-theme-toggle>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2 12h2.2M19.8 12H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56"></path></svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8a8.5 8.5 0 1 0 11.4 11.4Z"></path></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+          <span></span><span></span><span></span>
+          <span class="sr-only">Открыть меню</span>
+        </button>
+      </div>
     </div>
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
   </header>
 
   <main id="content">
@@ -112,9 +139,9 @@
 
     <section class="proof-strip" aria-label="Ключевые факты">
       <div class="container proof-grid">
-        <div class="proof-item reveal"><strong>5 000 000</strong><span>изображений в датасете</span></div>
-        <div class="proof-item reveal"><strong>3 года</strong><span>исследовательского и инженерного опыта</span></div>
-        <div class="proof-item reveal"><strong>30</strong><span>научных работ</span></div>
+        <div class="proof-item reveal"><strong data-count="5000000" data-count-format="spaces">5 000 000</strong><span>изображений в датасете</span></div>
+        <div class="proof-item reveal"><strong data-count="3" data-count-suffix=" года">3 года</strong><span>исследовательского и инженерного опыта</span></div>
+        <div class="proof-item reveal"><strong data-count="30">30</strong><span>научных работ</span></div>
         <div class="proof-item reveal"><strong>B2</strong><span>English · Upper-Intermediate</span></div>
       </div>
     </section>
@@ -287,7 +314,7 @@
           <article class="research-card reveal">
             <div class="research-card-meta"><span>2026</span><span>ЭМГ · Mechatronics</span></div>
             <h3>Программно-аппаратная обработка сигналов поверхностной электромиографии для адаптивного управления мехатронными устройствами</h3>
-            <p>«Информационные технологии в проектировании и производстве», № 2 (202), с. 43–46.</p>
+            <p>«Информационные технологии в проектировании и производстве», № 2 (202), с. 43–46. EDN ILNRRI.</p>
             <a href="https://doi.org/10.52190/2073-2597_2026_2_43" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>
           </article>
           <article class="research-card reveal">
@@ -305,7 +332,7 @@
           <article class="research-card reveal">
             <div class="research-card-meta"><span>2025</span><span>TCN-LSTM · NIST</span></div>
             <h3>Гибридная модель TCN-LSTM для анализа статистической случайности бинарных последовательностей</h3>
-            <p>ПТиТТ и ОТТ, Уфа, с. 817–818.</p>
+            <p>ПТиТТ / ОТТ-2025, Уфа, с. 817–818.</p>
             <a href="https://elibrary.ru/item.asp?id=88864909" target="_blank" rel="noreferrer">eLIBRARY <span aria-hidden="true">↗</span></a>
           </article>
           <article class="research-card reveal">
@@ -333,7 +360,7 @@
               <ol class="work-list">
                 <li>
                   <span class="work-index">01</span>
-                  <div><h4><a href="https://doi.org/10.52190/2073-2597_2026_2_43" target="_blank" rel="noreferrer">Программно-аппаратная обработка сигналов поверхностной электромиографии для адаптивного управления мехатронными устройствами</a></h4><p>Гарафутдинов А. А. · «Информационные технологии в проектировании и производстве», № 2 (202), с. 43–46.</p></div>
+                  <div><h4><a href="https://doi.org/10.52190/2073-2597_2026_2_43" target="_blank" rel="noreferrer">Программно-аппаратная обработка сигналов поверхностной электромиографии для адаптивного управления мехатронными устройствами</a></h4><p>Гарафутдинов А. А. · «Информационные технологии в проектировании и производстве», № 2 (202), с. 43–46. · EDN ILNRRI.</p></div>
                 </li>
               </ol>
             </section>
@@ -347,8 +374,8 @@
                 <li><span class="work-index">04</span><div><h4><a href="https://elibrary.ru/item.asp?id=83252950" target="_blank" rel="noreferrer">Функциональная парадигма создания бионического протеза кисти с винтовыми приводами и модульной электроникой</a></h4><p>Гарафутдинов А. А., Никишина Г. В. · «Прикладная электродинамика, фотоника и живые системы», с. 304–305.</p></div></li>
                 <li><span class="work-index">05</span><div><h4><a href="https://pureportal.spbu.ru/files/145128061/elibrary_83226052_17263009.pdf" target="_blank" rel="noreferrer">ЭМГ-система регистрации и адаптивной обработки миосигналов</a></h4><p>Гарафутдинов А. А., научный руководитель Никишина Г. В. · «Лобачевский 2.0», с. 53–56.</p></div></li>
                 <li><span class="work-index">06</span><div><h4><a href="https://lk.kai.ru/arhiv-konferencii/2025.pdf" target="_blank" rel="noreferrer">Обзор микросхемы ADS1299 для многоканальной регистрации биопотенциалов</a></h4><p>Гарафутдинов А. А. · XXVII Туполевские чтения, с. 1277–1280.</p></div></li>
-                <li><span class="work-index">07</span><div><h4><a href="https://elibrary.ru/item.asp?id=88864631" target="_blank" rel="noreferrer">ADS1299: аппаратное внедрение в задачах человеко-машинного интерфейса по sEMG</a></h4><p>Гарафутдинов А. А., Никишина Г. В. · ПТиТТ и ОТТ, Уфа, с. 411–412.</p></div></li>
-                <li><span class="work-index">08</span><div><h4><a href="https://elibrary.ru/item.asp?id=88864909" target="_blank" rel="noreferrer">Гибридная нейросетевая модель TCN-LSTM для анализа статистической случайности бинарных последовательностей на примере теста NIST Runs</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · ПТиТТ и ОТТ, Уфа, с. 817–818.</p></div></li>
+                <li><span class="work-index">07</span><div><h4><a href="https://elibrary.ru/item.asp?id=88864631" target="_blank" rel="noreferrer">ADS1299 аппаратное внедрение в задачах человеко-машинного интерфейса по SEMG</a></h4><p>Гарафутдинов А. А., Никишина Г. В. · ПТиТТ / ОТТ-2025, Уфа, с. 411–412.</p></div></li>
+                <li><span class="work-index">08</span><div><h4><a href="https://elibrary.ru/item.asp?id=88864909" target="_blank" rel="noreferrer">Гибридная нейросетевая модель TCN-LSTM для анализа статистической случайности бинарных последовательностей на примере теста NIST Runs</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · ПТиТТ / ОТТ-2025, Уфа, с. 817–818.</p></div></li>
               </ol>
             </section>
 
@@ -357,10 +384,10 @@
               <ol class="work-list">
                 <li><span class="work-index">01</span><div><h4><a href="https://dspace.kpfu.ru/xmlui/bitstream/handle/net/185008/Garifullin_A.I._KOOS_2024.pdf?sequence=-1" target="_blank" rel="noreferrer">Формирование обучающей выборки для машинного обучения на основе модели теста NIST Longest Run случайной бинарной последовательности</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · XXVIII школа «Когерентная оптика и оптическая спектроскопия», с. 34–39.</p></div></li>
                 <li><span class="work-index">02</span><div><h4><a href="https://elibrary.ru/item.asp?id=73960447" target="_blank" rel="noreferrer">Применение свёрточных нейронных сетей для детектирования структурных аномалий в данных с использованием теста LongestRun</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · «Прикладная электродинамика, фотоника и живые системы», с. 598–599.</p></div></li>
-                <li><span class="work-index">03</span><div><h4><a href="https://elibrary.ru/item.asp?id=74498997" target="_blank" rel="noreferrer">Применение цифровых технологий в образовании на примере разработки системы управления макетом бионической руки</a></h4><p>Хакимзянова С. И., Гарафутдинов А. А. · «Прикладная электродинамика, фотоника и живые системы», с. 828–829.</p></div></li>
+                <li><span class="work-index">03</span><div><h4><a href="https://elibrary.ru/item.asp?id=74498997" target="_blank" rel="noreferrer">Применение цифровых технологий в образовании на примере разработки системы управления макетом бионической руки</a></h4><p>Хакимзянова С. И., Гарафутдинов А. А., Никишина Г. В. · «Прикладная электродинамика, фотоника и живые системы», с. 828–829.</p></div></li>
                 <li><span class="work-index">04</span><div><h4>Описание алгоритмического обеспечения системы распознавания жестов кисти руки на основе данных, полученных с камеры</h4><p>Гарафутдинов А. А., Никишина Г. В. · Всероссийский конкурс научных работ «Лобачевский — 2024», с. 53–54.</p></div></li>
                 <li><span class="work-index">05</span><div><h4><a href="https://doi.org/10.52190/2073-2600_2024_3_28" target="_blank" rel="noreferrer">Интеграция нейросетевых технологий в очках с ЭЭГ-датчиками для анализа мозговой активности и управления внешними устройствами</a></h4><p>Гарафутдинов А. А., Хакимзянова С. И. · «Вопросы защиты информации», № 3 (146), с. 28–31.</p></div></li>
-                <li><span class="work-index">06</span><div><h4><a href="https://elibrary.ru/item.asp?id=74499005" target="_blank" rel="noreferrer">Основные шаги при разработке системы дистанционного управления макетом бионической руки с помощью инфракрасного излучения</a></h4><p>Гарафутдинов А. А., Хакимзянова С. И. · «Прикладная электродинамика, фотоника и живые системы», с. 848–849.</p></div></li>
+                <li><span class="work-index">06</span><div><h4><a href="https://elibrary.ru/item.asp?id=74499005" target="_blank" rel="noreferrer">Основные шаги при разработке системы дистанционного управления макетом бионической руки с помощью инфракрасного излучения</a></h4><p>Гарафутдинов А. А., Хакимзянова С. И., Никишина Г. В. · «Прикладная электродинамика, фотоника и живые системы», с. 848–849.</p></div></li>
                 <li><span class="work-index">07</span><div><h4><a href="https://elibrary.ru/item.asp?id=75254349" target="_blank" rel="noreferrer">Разработка аппаратной части автономной системы поиска предметов на базе беспроводных меток</a></h4><p>Хакимзянова С. И., Гарафутдинов А. А., Никишина Г. В. · ПТиТТ-2024, с. 383–384.</p></div></li>
                 <li><span class="work-index">08</span><div><h4><a href="https://elibrary.ru/item.asp?id=75254350" target="_blank" rel="noreferrer">Разработка программной части автономной системы поиска предметов на базе беспроводных меток</a></h4><p>Хакимзянова С. И., Гарафутдинов А. А., Никишина Г. В. · ПТиТТ-2024, с. 385–386.</p></div></li>
                 <li><span class="work-index">09</span><div><h4><a href="https://science.kuzstu.ru/wp-content/Events/Conference/Other/2024/SIF_2024/pages/Articles/104.pdf" target="_blank" rel="noreferrer">Neural Networks in English Language Processing</a></h4><p>Garafutdinov A. A. · Международный молодёжный научный форум «Шаг в будущее», с. 104.1–104.3.</p></div></li>
@@ -425,29 +452,100 @@
       </div>
     </section>
 
-    <section class="section" id="experience">
-      <div class="container two-col">
-        <div class="section-title-sticky reveal">
-          <p class="eyebrow">Опыт</p>
-          <h2>Исследовательский и инженерный опыт</h2>
-          <p>Три года работы с ML, сигналами, computer vision и экспериментальными данными. Робототехника показана как дополнительный инженерный опыт.</p>
+    <section class="section work-section" id="experience">
+      <div class="container">
+        <div class="section-head work-head reveal">
+          <div><p class="eyebrow">Опыт</p><h2>Опыт и места работы</h2></div>
+          <p>Исследования, разработка технических систем и преподавание точных дисциплин.</p>
         </div>
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-meta"><span>2022 — сейчас</span><span>3 года</span></div>
-            <h3>ML и исследовательская работа</h3>
-            <p class="company">КНИТУ-КАИ им. А. Н. Туполева</p>
-            <ul>
-              <li>Подготовка данных, предобработка, обучение, настройка моделей, оценка качества и анализ ошибок.</li>
-              <li>Классификация ЭМГ-сигналов, computer vision и интеграция алгоритмов в технические системы.</li>
-              <li>Разметка квантовых данных и подготовка выборок для исследований.</li>
+        <div class="workplace-grid">
+          <article class="workplace-card workplace-card-main reveal">
+            <div class="workplace-top"><span class="workplace-index">01</span><span class="workplace-period">2022 — сейчас</span></div>
+            <p class="workplace-company">КНИТУ-КАИ им. А. Н. Туполева</p>
+            <h3>ML, исследования и инженерная работа</h3>
+            <p class="workplace-summary">Работа с моделями машинного обучения, экспериментальными данными и аппаратной частью исследовательских систем.</p>
+            <div class="workplace-roles">
+              <div>
+                <span>2022 — сейчас</span>
+                <strong>ML и исследовательская работа</strong>
+                <p>Подготовка и разметка данных, обучение моделей, оценка качества, анализ ошибок, ЭМГ, computer vision и квантовые данные.</p>
+              </div>
+              <div>
+                <span>2024 — 2026</span>
+                <strong>Техник</strong>
+                <p>Сборка макетов, распайка, изготовление плат и разработка принципиальных схем.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="workplace-card reveal">
+            <div class="workplace-top"><span class="workplace-index">02</span><span class="workplace-period">2022 — 2023 · 6 месяцев</span></div>
+            <p class="workplace-company">TutGood</p>
+            <h3>Репетитор информатики и математики</h3>
+            <p class="workplace-summary">Проводил индивидуальные занятия и подбирал материал под уровень ученика.</p>
+            <ul class="workplace-list">
+              <li>Объяснение алгоритмов, основ программирования и методов решения задач</li>
+              <li>Подготовка заданий по информатике и математике</li>
+              <li>Разбор ошибок и закрепление материала на практике</li>
             </ul>
           </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-meta"><span>2024 — 2026</span><span>Инженерный опыт</span></div>
-            <h3>Техник</h3>
-            <p class="company">КНИТУ-КАИ им. А. Н. Туполева</p>
-            <p>Сборка макетов, распайка, изготовление плат и разработка принципиальных схем.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft education-section" id="education">
+      <div class="container">
+        <div class="section-head education-head reveal">
+          <div><p class="eyebrow">Дополнительное образование</p><h2>Курсы и профессиональная подготовка</h2></div>
+          <p>Программы по проектированию, информационным системам, embedded-разработке, управлению проектами, английскому языку и Python.</p>
+        </div>
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <div class="education-top"><span class="education-mark">PCB</span><time datetime="2026">2026</time></div>
+            <p class="education-provider">КНИТУ-КАИ им. А. Н. Туполева</p>
+            <h3>Цифровое проектирование электротехнических и электронных устройств</h3>
+            <p class="education-note">Специалист в области цифрового проектирования электротехнических и электронных устройств</p>
+            <ul class="education-tags"><li>Digital design</li><li>Electronics</li><li>CAD</li></ul>
+          </article>
+
+          <article class="education-card reveal">
+            <div class="education-top"><span class="education-mark education-mark-copper">1C</span><time datetime="2025">2025</time></div>
+            <p class="education-provider">КНИТУ-КАИ им. А. Н. Туполева</p>
+            <h3>1С: ERP Управление предприятием</h3>
+            <p class="education-note">Специалист по информационным системам</p>
+            <ul class="education-tags"><li>1С: ERP</li><li>Information systems</li><li>Enterprise data</li></ul>
+          </article>
+
+          <article class="education-card reveal">
+            <div class="education-top"><span class="education-mark education-mark-indigo">CPS</span><time datetime="2024">2024</time></div>
+            <p class="education-provider">КНИТУ-КАИ · Университет Иннополис</p>
+            <h3>Разработка киберфизических систем</h3>
+            <p class="education-note">Квалификация «Программист». Проектирование систем, объединяющих программную и аппаратную части</p>
+            <ul class="education-tags"><li>Embedded</li><li>Sensors</li><li>Software + hardware</li></ul>
+          </article>
+
+          <article class="education-card reveal">
+            <div class="education-top"><span class="education-mark education-mark-green">PM</span><time datetime="2024">2024</time></div>
+            <p class="education-provider">КНИТУ-КАИ им. А. Н. Туполева</p>
+            <h3>Технологическое предпринимательство: от идеи до проекта</h3>
+            <p class="education-note">Специалист по управлению проектами</p>
+            <ul class="education-tags"><li>Product idea</li><li>Project management</li><li>Pitching</li></ul>
+          </article>
+
+          <article class="education-card reveal">
+            <div class="education-top"><span class="education-mark education-mark-slate">EN</span><time datetime="2022">2022</time></div>
+            <p class="education-provider">U.S. Department of State</p>
+            <h3>Academic English</h3>
+            <p class="education-note">Английский язык в инженерной и академической среде</p>
+            <ul class="education-tags"><li>English B2</li><li>Technical English</li><li>Academic writing</li></ul>
+          </article>
+
+          <article class="education-card reveal">
+            <div class="education-top"><span class="education-mark education-mark-blue">PY</span><time datetime="2022">2022</time></div>
+            <p class="education-provider">Университет Иннополис</p>
+            <h3>Разработка 2D-игр на Python</h3>
+            <p class="education-note">Практический курс объёмом 144 академических часа: Python, ООП, игровой цикл и интерактивная логика</p>
+            <ul class="education-tags"><li>Python</li><li>OOP</li><li>2D games</li><li>Event handling</li></ul>
           </article>
         </div>
       </div>
@@ -489,6 +587,7 @@
     <div class="container"><span>© 2026 Айзат Гарафутдинов</span><a href="#top">Наверх ↑</a></div>
   </footer>
 
-  <script src="script.js?v=5"></script>
+  <script src="preferences.js?v=7"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
