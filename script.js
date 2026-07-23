@@ -5,6 +5,8 @@ const navLinks = [...document.querySelectorAll('[data-nav] a')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const scrollProgress = document.querySelector('[data-scroll-progress]');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const parallaxRoot = document.querySelector('[data-parallax-root]');
+const parallaxAtmosphere = parallaxRoot?.querySelector('.hero-atmosphere');
 const translate = (value) => window.portfolioI18n?.t(value) || value;
 
 const closeMenu = ({ returnFocus = false } = {}) => {
@@ -24,6 +26,11 @@ const updateViewportState = () => {
     const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
     scrollProgress.style.transform = `scaleX(${progress})`;
   }
+  if (parallaxAtmosphere && !reducedMotion.matches) {
+    const heroHeight = Math.max(parallaxRoot?.offsetHeight || window.innerHeight, 1);
+    const heroScroll = Math.min(1, Math.max(0, window.scrollY / heroHeight));
+    parallaxAtmosphere.style.setProperty('--ps', heroScroll.toFixed(4));
+  }
   viewportFrame = 0;
 };
 const requestViewportUpdate = () => {
@@ -32,6 +39,58 @@ const requestViewportUpdate = () => {
 updateViewportState();
 window.addEventListener('scroll', requestViewportUpdate, { passive: true });
 window.addEventListener('resize', requestViewportUpdate, { passive: true });
+
+let parallaxFrame = 0;
+const parallaxPointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
+const renderParallax = () => {
+  parallaxPointer.x += (parallaxPointer.targetX - parallaxPointer.x) * .12;
+  parallaxPointer.y += (parallaxPointer.targetY - parallaxPointer.y) * .12;
+  parallaxAtmosphere?.style.setProperty('--px', parallaxPointer.x.toFixed(4));
+  parallaxAtmosphere?.style.setProperty('--py', parallaxPointer.y.toFixed(4));
+  const distance = Math.abs(parallaxPointer.targetX - parallaxPointer.x) + Math.abs(parallaxPointer.targetY - parallaxPointer.y);
+  if (distance > .002 && !reducedMotion.matches) {
+    parallaxFrame = window.requestAnimationFrame(renderParallax);
+  } else {
+    parallaxPointer.x = parallaxPointer.targetX;
+    parallaxPointer.y = parallaxPointer.targetY;
+    parallaxAtmosphere?.style.setProperty('--px', parallaxPointer.x.toFixed(4));
+    parallaxAtmosphere?.style.setProperty('--py', parallaxPointer.y.toFixed(4));
+    parallaxFrame = 0;
+  }
+};
+const requestParallaxRender = () => {
+  if (!parallaxFrame && !reducedMotion.matches) parallaxFrame = window.requestAnimationFrame(renderParallax);
+};
+parallaxRoot?.addEventListener('pointermove', (event) => {
+  if (reducedMotion.matches || event.pointerType === 'touch') return;
+  const rect = parallaxRoot.getBoundingClientRect();
+  parallaxPointer.targetX = Math.max(-1, Math.min(1, ((event.clientX - rect.left) / rect.width - .5) * 2));
+  parallaxPointer.targetY = Math.max(-1, Math.min(1, ((event.clientY - rect.top) / rect.height - .5) * 2));
+  requestParallaxRender();
+}, { passive: true });
+parallaxRoot?.addEventListener('pointerleave', () => {
+  parallaxPointer.targetX = 0;
+  parallaxPointer.targetY = 0;
+  requestParallaxRender();
+});
+
+const resetParallax = () => {
+  if (!reducedMotion.matches) {
+    requestViewportUpdate();
+    return;
+  }
+  if (parallaxFrame) window.cancelAnimationFrame(parallaxFrame);
+  parallaxFrame = 0;
+  parallaxPointer.x = 0;
+  parallaxPointer.y = 0;
+  parallaxPointer.targetX = 0;
+  parallaxPointer.targetY = 0;
+  parallaxAtmosphere?.style.setProperty('--px', '0');
+  parallaxAtmosphere?.style.setProperty('--py', '0');
+  parallaxAtmosphere?.style.setProperty('--ps', '0');
+};
+if (typeof reducedMotion.addEventListener === 'function') reducedMotion.addEventListener('change', resetParallax);
+else reducedMotion.addListener(resetParallax);
 
 menuToggle?.addEventListener('click', () => {
   const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';

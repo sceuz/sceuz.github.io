@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;family=Inter+Tight:wght@500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=10">
   <script>
     document.documentElement.classList.add('js');
     try {
@@ -81,7 +81,13 @@
   </header>
 
   <main id="content">
-    <section class="hero" id="top">
+    <section class="hero" id="top" data-parallax-root>
+      <div class="hero-atmosphere" aria-hidden="true">
+        <span class="parallax-layer parallax-grid"></span>
+        <span class="parallax-layer parallax-orb parallax-orb-one"></span>
+        <span class="parallax-layer parallax-orb parallax-orb-two"></span>
+        <span class="parallax-layer parallax-axis"></span>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow"><span class="status-dot"></span> Открыт к удалённой работе</p>
@@ -453,11 +459,40 @@
       <div class="container">
         <div class="section-head work-head reveal">
           <div><p class="eyebrow">Опыт</p><h2>Опыт и места работы</h2></div>
-          <p>Исследования, разработка технических систем и преподавание точных дисциплин.</p>
+          <p>ML-разработка, исследовательские проекты, робототехника, embedded-системы и преподавание.</p>
         </div>
         <div class="workplace-grid">
+          <article class="workplace-card workplace-card-featured reveal">
+            <div class="workplace-top"><span class="workplace-index">01</span><span class="workplace-period">Июнь 2025 — сейчас</span></div>
+            <p class="workplace-company">ООО «ТТК ДИДЖИТАЛ»</p>
+            <h3>ML / Robotics Developer</h3>
+            <p class="workplace-summary">Разрабатываю и проверяю ML-модели, готовлю данные для задач компьютерного зрения и соединяю алгоритмы с симуляцией и реальной аппаратной частью роботов.</p>
+            <div class="workplace-detail-grid">
+              <div class="workplace-detail">
+                <span>ML и данные</span>
+                <ul>
+                  <li>Сборка и разметка датасетов, проверка качества данных и подготовка выборок к обучению</li>
+                  <li>Обучение, проверка и анализ моделей на Python с PyTorch и TensorFlow/Keras</li>
+                  <li>Обработка видеопотока, computer vision и слежение за AprilTag</li>
+                </ul>
+              </div>
+              <div class="workplace-detail">
+                <span>Робототехника и embedded</span>
+                <ul>
+                  <li>Настройка симуляций в NVIDIA Isaac Sim и Isaac Lab, проверка checkpoint-моделей и sim-to-real</li>
+                  <li>Программирование, прошивка и отладка STM32 и других микроконтроллеров</li>
+                  <li>3D-моделирование деталей и узлов, подготовка геометрии для сборки, тестирования и симуляции</li>
+                  <li>Работа с актуаторами, датчиками, управляющими сигналами и ограничениями приводов</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="workplace-stack" aria-label="Технологии в ТТК ДИДЖИТАЛ">
+              <li>Python</li><li>PyTorch</li><li>OpenCV</li><li>AprilTag</li><li>Isaac Sim</li><li>Isaac Lab</li><li>STM32</li><li>3D CAD</li>
+            </ul>
+          </article>
+
           <article class="workplace-card workplace-card-main reveal">
-            <div class="workplace-top"><span class="workplace-index">01</span><span class="workplace-period">2022 — сейчас</span></div>
+            <div class="workplace-top"><span class="workplace-index">02</span><span class="workplace-period">2022 — сейчас</span></div>
             <p class="workplace-company">КНИТУ-КАИ им. А. Н. Туполева</p>
             <h3>ML, исследования и инженерная работа</h3>
             <p class="workplace-summary">Работа с моделями машинного обучения, экспериментальными данными и аппаратной частью исследовательских систем.</p>
@@ -476,7 +511,7 @@
           </article>
 
           <article class="workplace-card reveal">
-            <div class="workplace-top"><span class="workplace-index">02</span><span class="workplace-period">2022 — 2023 · 6 месяцев</span></div>
+            <div class="workplace-top"><span class="workplace-index">03</span><span class="workplace-period">2022 — 2023 · 6 месяцев</span></div>
             <p class="workplace-company">TutGood</p>
             <h3>Репетитор информатики и математики</h3>
             <p class="workplace-summary">Проводил индивидуальные занятия и подбирал материал под уровень ученика.</p>
@@ -584,7 +619,7 @@
     <div class="container"><span>© 2026 Айзат Гарафутдинов</span><a href="#top">Наверх ↑</a></div>
   </footer>
 
-  <script src="preferences.js?v=8"></script>
-  <script src="script.js?v=8"></script>
+  <script src="preferences.js?v=10"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
