@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Современная схема RAG-пайплайна</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0d141a"/>
+      <stop offset="1" stop-color="#17242b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".62" cy=".45" r=".55">
+      <stop stop-color="#355f70" stop-opacity=".48"/>
+      <stop offset="1" stop-color="#355f70" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#dbe5e9" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <rect width="1200" height="675" rx="34" fill="url(#glow)"/>
+  <rect width="1200" height="675" rx="34" fill="url(#grid)"/>
+  <g fill="#f3f1ec" fill-opacity=".08" stroke="#dbe5e9" stroke-opacity=".22">
+    <rect x="72" y="126" width="218" height="142" rx="18"/>
+    <rect x="92" y="286" width="218" height="142" rx="18"/>
+    <rect x="72" y="446" width="218" height="102" rx="18"/>
+  </g>
+  <g stroke="#f3f1ec" stroke-opacity=".44" stroke-width="8" stroke-linecap="round">
+    <path d="M105 164h116M105 191h145M105 218h92"/>
+    <path d="M125 324h116M125 351h145M125 378h82"/>
+    <path d="M105 484h140M105 511h96"/>
+  </g>
+  <g fill="none" stroke="#6f98a8" stroke-width="3" stroke-opacity=".78">
+    <path d="M310 197C420 197 420 274 492 274"/>
+    <path d="M310 357C410 357 422 320 492 320"/>
+    <path d="M290 496C406 496 420 370 492 370"/>
+  </g>
+  <g transform="translate(540 174)">
+    <rect width="260" height="326" rx="28" fill="#111b21" stroke="#6f98a8" stroke-opacity=".55"/>
+    <g fill="#6f98a8">
+      <circle cx="56" cy="70" r="8"/><circle cx="106" cy="52" r="7"/><circle cx="154" cy="78" r="9"/><circle cx="205" cy="55" r="6"/>
+      <circle cx="72" cy="132" r="6"/><circle cx="130" cy="118" r="10"/><circle cx="189" cy="139" r="8"/>
+      <circle cx="46" cy="196" r="7"/><circle cx="108" cy="184" r="7"/><circle cx="163" cy="211" r="9"/><circle cx="215" cy="190" r="7"/>
+      <circle cx="80" cy="260" r="8"/><circle cx="137" cy="254" r="6"/><circle cx="194" cy="275" r="9"/>
+    </g>
+    <g stroke="#6f98a8" stroke-opacity=".35" stroke-width="2">
+      <path d="M56 70l74 48 75-63M106 52l48 26 35 61M72 132l36 52 81-45M46 196l62-12 29 70M163 211l31 64M80 260l83-49"/>
+    </g>
+    <path d="M46 196L130 118 189 139 205 55" fill="none" stroke="#d7794e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#f0a27e"><circle cx="46" cy="196" r="9"/><circle cx="130" cy="118" r="9"/><circle cx="189" cy="139" r="9"/><circle cx="205" cy="55" r="9"/></g>
+  </g>
+  <path d="M800 337h74" stroke="#d7794e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M856 319l20 18-20 18" fill="none" stroke="#d7794e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(895 154)">
+    <rect width="235" height="366" rx="24" fill="#f3f1ec"/>
+    <rect x="28" y="34" width="78" height="16" rx="8" fill="#355f70"/>
+    <g fill="#12171c" fill-opacity=".18">
+      <rect x="28" y="86" width="178" height="10" rx="5"/><rect x="28" y="112" width="154" height="10" rx="5"/>
+      <rect x="28" y="138" width="170" height="10" rx="5"/><rect x="28" y="164" width="126" height="10" rx="5"/>
+    </g>
+    <rect x="28" y="218" width="179" height="82" rx="14" fill="#355f70" fill-opacity=".12" stroke="#355f70" stroke-opacity=".35"/>
+    <path d="M52 271l31-24 27 12 36-31 38 19" fill="none" stroke="#a45738" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="28" y="326" width="92" height="12" rx="6" fill="#a45738" fill-opacity=".72"/>
+  </g>
+</svg>

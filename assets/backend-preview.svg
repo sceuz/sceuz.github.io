@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Современная схема Python backend и интеграций</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f151a"/><stop offset="1" stop-color="#1b2931"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#355f70" stop-opacity=".45"/><stop offset="1" stop-color="#355f70" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#edf3f5" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/><rect width="1200" height="675" rx="34" fill="url(#grid)"/><circle cx="608" cy="332" r="300" fill="url(#glow)"/>
+  <g fill="none" stroke="#6f98a8" stroke-opacity=".55" stroke-width="3">
+    <path d="M222 162h164c69 0 62 122 126 122"/><path d="M222 337h290"/><path d="M222 512h164c69 0 62-122 126-122"/>
+    <path d="M688 284c70 0 74-122 144-122h150"/><path d="M688 337h294"/><path d="M688 390c70 0 74 122 144 122h150"/>
+  </g>
+  <g fill="#121c22" stroke="#6f98a8" stroke-opacity=".5" stroke-width="2">
+    <rect x="64" y="105" width="158" height="114" rx="24"/><rect x="64" y="280" width="158" height="114" rx="24"/><rect x="64" y="455" width="158" height="114" rx="24"/>
+    <rect x="982" y="105" width="154" height="114" rx="24"/><rect x="982" y="280" width="154" height="114" rx="24"/><rect x="982" y="455" width="154" height="114" rx="24"/>
+  </g>
+  <g fill="#f3f1ec" fill-opacity=".55">
+    <rect x="100" y="139" width="86" height="10" rx="5"/><rect x="100" y="166" width="58" height="8" rx="4"/>
+    <rect x="100" y="314" width="86" height="10" rx="5"/><rect x="100" y="341" width="58" height="8" rx="4"/>
+    <rect x="100" y="489" width="86" height="10" rx="5"/><rect x="100" y="516" width="58" height="8" rx="4"/>
+  </g>
+  <g transform="translate(492 198)">
+    <rect width="216" height="278" rx="36" fill="#f3f1ec"/>
+    <rect x="28" y="28" width="160" height="136" rx="22" fill="#17242b"/>
+    <path d="M72 65h72M72 96h72M72 127h72" stroke="#6f98a8" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="55" cy="65" r="7" fill="#d7794e"/><circle cx="55" cy="96" r="7" fill="#6f98a8"/><circle cx="55" cy="127" r="7" fill="#6f98a8"/>
+    <g fill="#355f70" fill-opacity=".16"><rect x="28" y="188" width="74" height="62" rx="16"/><rect x="114" y="188" width="74" height="62" rx="16"/></g>
+    <path d="M49 219h32M135 209h32M135 229h22" stroke="#355f70" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <path d="M222 337h270" stroke="#d7794e" stroke-width="6" stroke-linecap="round"/><path d="M708 337h274" stroke="#d7794e" stroke-width="6" stroke-linecap="round"/>
+  <g transform="translate(1003 132)" fill="none" stroke="#6f98a8" stroke-width="5" stroke-linecap="round"><circle cx="55" cy="30" r="19"/><path d="M45 30l7 7 14-16"/></g>
+  <g transform="translate(1010 306)" fill="#6f98a8"><circle cx="48" cy="31" r="24"/><circle cx="28" cy="51" r="16"/><circle cx="69" cy="52" r="17"/><rect x="28" y="31" width="41" height="35" rx="14"/></g>
+  <g transform="translate(1013 482)" fill="none" stroke="#6f98a8" stroke-width="5"><circle cx="45" cy="30" r="25"/><path d="M45 5v50M20 30h50"/></g>
+  <g fill="#d7794e"><circle cx="222" cy="337" r="8"/><circle cx="492" cy="337" r="8"/><circle cx="708" cy="337" r="8"/><circle cx="982" cy="337" r="8"/></g>
+</svg>

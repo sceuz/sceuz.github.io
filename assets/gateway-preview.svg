@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Современная схема маршрутизации LLM-запросов</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e1419"/><stop offset="1" stop-color="#1a252c"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#4e8194" stop-opacity=".45"/><stop offset="1" stop-color="#4e8194" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#edf3f5" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/><rect width="1200" height="675" rx="34" fill="url(#grid)"/>
+  <circle cx="620" cy="338" r="290" fill="url(#halo)"/>
+  <g fill="#121c22" stroke="#6f98a8" stroke-opacity=".55" stroke-width="2">
+    <rect x="78" y="112" width="228" height="126" rx="25"/><rect x="78" y="274" width="228" height="126" rx="25"/><rect x="78" y="436" width="228" height="126" rx="25"/>
+  </g>
+  <g fill="#6f98a8" fill-opacity=".78">
+    <circle cx="125" cy="175" r="18"/><circle cx="125" cy="337" r="18"/><circle cx="125" cy="499" r="18"/>
+  </g>
+  <g fill="#f3f1ec" fill-opacity=".38">
+    <rect x="164" y="154" width="102" height="11" rx="6"/><rect x="164" y="182" width="72" height="9" rx="5"/>
+    <rect x="164" y="316" width="102" height="11" rx="6"/><rect x="164" y="344" width="72" height="9" rx="5"/>
+    <rect x="164" y="478" width="102" height="11" rx="6"/><rect x="164" y="506" width="72" height="9" rx="5"/>
+  </g>
+  <g fill="none" stroke="#6f98a8" stroke-width="3" stroke-opacity=".7"><path d="M306 175C440 175 430 295 526 315"/><path d="M306 337h220"/><path d="M306 499C440 499 430 379 526 359"/></g>
+  <g transform="translate(526 230)">
+    <rect width="258" height="216" rx="36" fill="#f3f1ec" fill-opacity=".075" stroke="#dbe5e9" stroke-opacity=".28"/>
+    <path d="M129 36l74 72-74 72-74-72z" fill="#355f70" stroke="#9ab6c1" stroke-opacity=".72" stroke-width="2"/>
+    <path d="M92 108h74M129 71v74" stroke="#f3f1ec" stroke-opacity=".72" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="129" cy="108" r="15" fill="#d7794e"/>
+  </g>
+  <path d="M784 338h110" stroke="#d7794e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M875 318l23 20-23 20" fill="none" stroke="#d7794e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(918 132)">
+    <rect width="212" height="412" rx="28" fill="#f3f1ec"/>
+    <rect x="28" y="31" width="86" height="14" rx="7" fill="#355f70"/>
+    <g fill="#12171c" fill-opacity=".13"><rect x="28" y="76" width="156" height="9" rx="5"/><rect x="28" y="100" width="126" height="9" rx="5"/></g>
+    <g transform="translate(28 148)">
+      <rect width="156" height="116" rx="18" fill="#16242b"/>
+      <path d="M18 78l28-30 28 16 31-38 33 18" fill="none" stroke="#6f98a8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="105" cy="26" r="7" fill="#d7794e"/>
+    </g>
+    <g fill="#355f70" fill-opacity=".13"><rect x="28" y="295" width="72" height="72" rx="16"/><rect x="112" y="295" width="72" height="72" rx="16"/></g>
+    <path d="M50 332h28M134 322h28M134 342h18" stroke="#355f70" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

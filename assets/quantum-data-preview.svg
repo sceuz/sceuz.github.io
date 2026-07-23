@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Современная схема разметки экспериментальных фотонных данных</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e1419"/><stop offset="1" stop-color="#17272f"/></linearGradient>
+    <radialGradient id="beam"><stop stop-color="#f0a27e" stop-opacity=".55"/><stop offset="1" stop-color="#f0a27e" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#edf3f5" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/><rect width="1200" height="675" rx="34" fill="url(#grid)"/>
+  <ellipse cx="332" cy="337" rx="260" ry="210" fill="url(#beam)"/>
+  <path d="M72 337h344" stroke="#d7794e" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="168" cy="337" r="54" fill="#121c22" stroke="#6f98a8" stroke-width="3"/><circle cx="168" cy="337" r="18" fill="#f0a27e"/>
+  <path d="M222 337h88" stroke="#6f98a8" stroke-width="2" stroke-dasharray="6 9"/>
+  <g transform="translate(310 177)">
+    <rect width="218" height="320" rx="26" fill="#f3f1ec" fill-opacity=".065" stroke="#6f98a8" stroke-opacity=".55"/>
+    <g fill="#6f98a8">
+      <circle cx="46" cy="56" r="5"/><circle cx="79" cy="56" r="5"/><circle cx="112" cy="56" r="5"/><circle cx="145" cy="56" r="5"/><circle cx="178" cy="56" r="5"/>
+      <circle cx="46" cy="93" r="5"/><circle cx="79" cy="93" r="5"/><circle cx="112" cy="93" r="5"/><circle cx="145" cy="93" r="5"/><circle cx="178" cy="93" r="5"/>
+      <circle cx="46" cy="130" r="5"/><circle cx="79" cy="130" r="5"/><circle cx="112" cy="130" r="5"/><circle cx="145" cy="130" r="5"/><circle cx="178" cy="130" r="5"/>
+      <circle cx="46" cy="167" r="5"/><circle cx="79" cy="167" r="5"/><circle cx="112" cy="167" r="5"/><circle cx="145" cy="167" r="5"/><circle cx="178" cy="167" r="5"/>
+      <circle cx="46" cy="204" r="5"/><circle cx="79" cy="204" r="5"/><circle cx="112" cy="204" r="5"/><circle cx="145" cy="204" r="5"/><circle cx="178" cy="204" r="5"/>
+      <circle cx="46" cy="241" r="5"/><circle cx="79" cy="241" r="5"/><circle cx="112" cy="241" r="5"/><circle cx="145" cy="241" r="5"/><circle cx="178" cy="241" r="5"/>
+    </g>
+    <g fill="#d7794e"><circle cx="112" cy="93" r="8"/><circle cx="46" cy="167" r="8"/><circle cx="145" cy="204" r="8"/><circle cx="79" cy="241" r="8"/></g>
+    <rect x="31" y="78" width="96" height="104" rx="12" fill="none" stroke="#d7794e" stroke-width="3"/>
+  </g>
+  <path d="M528 337h82" stroke="#d7794e" stroke-width="6" stroke-linecap="round"/>
+  <g transform="translate(638 126)">
+    <rect width="238" height="422" rx="30" fill="#f3f1ec"/>
+    <rect x="28" y="30" width="182" height="230" rx="18" fill="#17242b"/>
+    <g stroke="#6f98a8" stroke-width="3" stroke-opacity=".75">
+      <path d="M46 77c18-28 34 28 52 0s34 28 52 0 34 28 46 0"/>
+      <path d="M46 117c18 28 34-28 52 0s34-28 52 0 34-28 46 0"/>
+      <path d="M46 157c18-28 34 28 52 0s34 28 52 0 34 28 46 0"/>
+      <path d="M46 197c18 28 34-28 52 0s34-28 52 0 34-28 46 0"/>
+    </g>
+    <rect x="88" y="53" width="60" height="168" rx="10" fill="#d7794e" fill-opacity=".13" stroke="#d7794e" stroke-width="3"/>
+    <g fill="#355f70" fill-opacity=".18"><rect x="28" y="286" width="84" height="104" rx="16"/><rect x="126" y="286" width="84" height="104" rx="16"/></g>
+    <path d="M48 364l18-26 16 11 15-30" fill="none" stroke="#a45738" stroke-width="5" stroke-linecap="round"/><path d="M146 340h44M146 363h28" stroke="#355f70" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <path d="M876 337h78" stroke="#6f98a8" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(976 208)" fill="#f3f1ec" fill-opacity=".08" stroke="#6f98a8" stroke-opacity=".5">
+    <rect width="154" height="258" rx="28"/>
+    <circle cx="77" cy="78" r="32"/><path d="M57 78l14 14 28-31" fill="none" stroke="#d7794e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="36" y="143" width="82" height="10" rx="5"/><rect x="36" y="171" width="60" height="10" rx="5"/><rect x="36" y="199" width="74" height="10" rx="5"/>
+  </g>
+</svg>

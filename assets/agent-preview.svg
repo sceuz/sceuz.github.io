@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Современная схема агентного workflow</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10151b"/><stop offset="1" stop-color="#1b2830"/></linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6f98a8"/><stop offset=".55" stop-color="#d7794e"/><stop offset="1" stop-color="#f0a27e"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#dbe5e9" stroke-opacity=".045"/></pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/><rect width="1200" height="675" rx="34" fill="url(#grid)"/>
+  <path d="M112 337H1088" stroke="#dbe5e9" stroke-opacity=".11" stroke-width="2"/>
+  <path d="M112 337C236 337 250 190 388 190s140 294 286 294 156-147 286-147h128" fill="none" stroke="url(#flow)" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#131d23" stroke="#6f98a8" stroke-opacity=".65" stroke-width="2">
+    <rect x="62" y="282" width="138" height="110" rx="24"/>
+    <rect x="318" y="125" width="170" height="130" rx="28"/>
+    <rect x="562" y="269" width="182" height="138" rx="30"/>
+    <rect x="818" y="419" width="170" height="130" rx="28"/>
+    <rect x="1032" y="282" width="116" height="110" rx="24"/>
+  </g>
+  <g fill="none" stroke="#dbe5e9" stroke-opacity=".72" stroke-width="5" stroke-linecap="round">
+    <path d="M99 319h64M99 341h44M99 363h56"/>
+    <path d="M358 169h90M358 193h60M358 217h76"/>
+    <circle cx="653" cy="338" r="36"/><path d="M630 339l16 16 33-36"/>
+    <path d="M858 463h90M858 487h58M858 511h76"/>
+    <path d="M1067 320h46M1067 343h46M1067 366h30"/>
+  </g>
+  <g fill="#d7794e">
+    <circle cx="200" cy="337" r="8"/><circle cx="318" cy="190" r="8"/><circle cx="488" cy="190" r="8"/>
+    <circle cx="562" cy="338" r="8"/><circle cx="744" cy="484" r="8"/><circle cx="818" cy="484" r="8"/><circle cx="988" cy="484" r="8"/><circle cx="1032" cy="337" r="8"/>
+  </g>
+  <g fill="none" stroke="#6f98a8" stroke-opacity=".38" stroke-width="2">
+    <path d="M403 125V73H653v196"/><path d="M903 419V337h129"/><path d="M653 407v77h91"/>
+  </g>
+  <g transform="translate(525 72)">
+    <rect width="256" height="76" rx="20" fill="#f3f1ec" fill-opacity=".07" stroke="#f3f1ec" stroke-opacity=".18"/>
+    <circle cx="42" cy="38" r="12" fill="#6f98a8"/><rect x="70" y="26" width="116" height="10" rx="5" fill="#f3f1ec" fill-opacity=".48"/><rect x="70" y="46" width="78" height="8" rx="4" fill="#f3f1ec" fill-opacity=".2"/>
+    <circle cx="220" cy="38" r="13" fill="#a45738"/>
+  </g>
+  <circle cx="653" cy="338" r="78" fill="none" stroke="#d7794e" stroke-opacity=".38" stroke-width="2" stroke-dasharray="7 12"/>
+</svg>

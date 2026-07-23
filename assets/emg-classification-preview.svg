@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Современная схема классификации многоканальных ЭМГ-сигналов</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e151a"/><stop offset="1" stop-color="#1b2a32"/></linearGradient>
+    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6f98a8"/><stop offset="1" stop-color="#d7794e"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#edf3f5" stroke-opacity=".04"/></pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/><rect width="1200" height="675" rx="34" fill="url(#grid)"/>
+  <g transform="translate(54 112)">
+    <rect width="448" height="450" rx="28" fill="#f3f1ec" fill-opacity=".055" stroke="#6f98a8" stroke-opacity=".42"/>
+    <g fill="none" stroke="url(#trace)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M28 69h44l8-22 12 52 13-73 13 94 14-63 12 30 16-18 12 9h248"/>
+      <path d="M28 130h59l8-18 12 42 12-58 13 70 14-45 14 20 18-11h232"/>
+      <path d="M28 191h35l10-35 12 71 12-95 14 118 13-76 12 35 17-18 14 9h243"/>
+      <path d="M28 252h73l9-20 12 45 12-62 14 76 14-51 14 23 20-11h204"/>
+      <path d="M28 313h49l10-31 12 63 13-85 13 103 14-67 13 31 17-16 12 8h239"/>
+      <path d="M28 374h63l9-17 12 40 12-55 13 67 14-44 13 21 18-10h228"/>
+    </g>
+    <rect x="94" y="32" width="112" height="380" rx="16" fill="#d7794e" fill-opacity=".08" stroke="#d7794e" stroke-width="3"/>
+    <path d="M206 32v380" stroke="#d7794e" stroke-opacity=".75" stroke-width="2" stroke-dasharray="7 8"/>
+  </g>
+  <path d="M502 337h72" stroke="#d7794e" stroke-width="6" stroke-linecap="round"/>
+  <g transform="translate(592 145)">
+    <rect width="244" height="385" rx="30" fill="#f3f1ec" fill-opacity=".07" stroke="#6f98a8" stroke-opacity=".48"/>
+    <g transform="translate(35 36)">
+      <g fill="#355f70"><rect width="38" height="38" rx="9"/><rect x="46" width="38" height="38" rx="9"/><rect x="92" width="38" height="38" rx="9"/><rect x="138" width="38" height="38" rx="9"/>
+        <rect y="46" width="38" height="38" rx="9"/><rect x="46" y="46" width="38" height="38" rx="9"/><rect x="92" y="46" width="38" height="38" rx="9"/><rect x="138" y="46" width="38" height="38" rx="9"/>
+        <rect y="92" width="38" height="38" rx="9"/><rect x="46" y="92" width="38" height="38" rx="9"/><rect x="92" y="92" width="38" height="38" rx="9"/><rect x="138" y="92" width="38" height="38" rx="9"/>
+        <rect y="138" width="38" height="38" rx="9"/><rect x="46" y="138" width="38" height="38" rx="9"/><rect x="92" y="138" width="38" height="38" rx="9"/><rect x="138" y="138" width="38" height="38" rx="9"/>
+      </g>
+      <g fill="#d7794e"><rect x="46" y="46" width="38" height="38" rx="9"/><rect x="92" y="92" width="38" height="38" rx="9"/><rect x="138" y="138" width="38" height="38" rx="9"/></g>
+    </g>
+    <g fill="#f3f1ec" fill-opacity=".24"><rect x="35" y="246" width="174" height="10" rx="5"/><rect x="35" y="274" width="132" height="10" rx="5"/><rect x="35" y="302" width="155" height="10" rx="5"/></g>
+  </g>
+  <path d="M836 337h72" stroke="#d7794e" stroke-width="6" stroke-linecap="round"/>
+  <g transform="translate(930 132)">
+    <rect width="216" height="412" rx="28" fill="#f3f1ec"/>
+    <g transform="translate(28 34)">
+      <rect width="160" height="78" rx="18" fill="#355f70"/><rect y="94" width="160" height="78" rx="18" fill="#355f70" fill-opacity=".12"/><rect y="188" width="160" height="78" rx="18" fill="#355f70" fill-opacity=".12"/>
+      <circle cx="34" cy="39" r="12" fill="#f0a27e"/><circle cx="34" cy="133" r="12" fill="#355f70" fill-opacity=".45"/><circle cx="34" cy="227" r="12" fill="#355f70" fill-opacity=".45"/>
+      <path d="M64 39h67M64 133h54M64 227h72" stroke="#f3f1ec" stroke-opacity=".7" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <path d="M55 348c24-38 39 22 58-7s34 18 50-14" fill="none" stroke="#a45738" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

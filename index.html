@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Айзат Гарафутдинов — AI / ML Engineer. Machine Learning, Computer Vision, LLM-системы, Python Backend и робототехнические проекты.">
+  <meta name="description" content="Айзат Гарафутдинов — AI / ML Engineer. Machine Learning, Computer Vision, обработка ЭМГ-сигналов, LLM-системы, Python Backend и 30 научных работ.">
   <meta name="theme-color" content="#f3f1ec">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Айзат Гарафутдинов — AI / ML Engineer">
-  <meta property="og:description" content="Machine Learning, Computer Vision, LLM-системы, Python Backend и робототехнические проекты.">
+  <meta property="og:description" content="Machine Learning, Computer Vision, обработка сигналов, LLM-системы, Python Backend и научные работы.">
   <meta property="og:url" content="https://sceuz.github.io/">
   <meta name="twitter:card" content="summary">
   <title>Айзат Гарафутдинов — AI / ML Engineer</title>
@@ -15,8 +15,8 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;family=Inter+Tight:wght@500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
   <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
   {
@@ -27,7 +27,7 @@
     "email": "mailto:ayzatg@yandex.ru",
     "url": "https://sceuz.github.io/",
     "sameAs": ["https://github.com/sceuz", "https://kazan.hh.ru/resume/5393aefaff094d18080039ed1f696556617441"],
-    "knowsAbout": ["Machine Learning", "Large Language Models", "Retrieval-Augmented Generation", "AI Agents", "Computer Vision", "Python", "PyTorch", "FastAPI", "Robotics", "NVIDIA Isaac Sim"]
+    "knowsAbout": ["Machine Learning", "Deep Learning", "Computer Vision", "Electromyography", "Signal Processing", "Large Language Models", "Retrieval-Augmented Generation", "AI Agents", "Python", "PyTorch", "FastAPI", "Robotics", "NVIDIA Isaac Sim"]
   }
   </script>
 </head>
@@ -48,7 +48,7 @@
         <a href="#ai-systems">AI Systems</a>
         <a href="#robotics">Роботы</a>
         <a href="#cases">Кейсы</a>
-        <a href="#backend">Backend</a>
+        <a href="#research">Научные работы</a>
         <a href="#experience">Опыт</a>
         <a href="#skills">Навыки</a>
         <a href="#contacts">Контакты</a>
@@ -113,8 +113,8 @@
     <section class="proof-strip" aria-label="Ключевые факты">
       <div class="container proof-grid">
         <div class="proof-item reveal"><strong>5 000 000</strong><span>изображений в датасете</span></div>
-        <div class="proof-item reveal"><strong>3 г. 9 мес.</strong><span>общего опыта</span></div>
-        <div class="proof-item reveal"><strong>1 г. 2 мес.</strong><span>ML / Robotics разработки</span></div>
+        <div class="proof-item reveal"><strong>3 года</strong><span>исследовательского и инженерного опыта</span></div>
+        <div class="proof-item reveal"><strong>30</strong><span>научных работ</span></div>
         <div class="proof-item reveal"><strong>B2</strong><span>English · Upper-Intermediate</span></div>
       </div>
     </section>
@@ -127,9 +127,18 @@
         </div>
         <p class="code-intro reveal">Рабочие Python-системы с API, тестами, Docker-конфигурацией и воспроизводимым офлайн-режимом без платных ключей.</p>
         <div class="repo-grid">
-          <a class="repo-card reveal" href="https://github.com/sceuz/rag-evaluation-platform" target="_blank" rel="noreferrer"><span>RAG · Vector Search · FastAPI</span><h3>RAG Evaluation Platform</h3><p>Ingestion, chunking, retrieval, цитаты и оценка качества ответов.</p><i aria-hidden="true">↗</i></a>
-          <a class="repo-card reveal" href="https://github.com/sceuz/agent-workflow-lab" target="_blank" rel="noreferrer"><span>AI Agents · Guardrails · Tracing</span><h3>Agent Workflow Lab</h3><p>Планирование, вызов инструментов, review и трассируемые переходы состояния.</p><i aria-hidden="true">↗</i></a>
-          <a class="repo-card reveal" href="https://github.com/sceuz/llm-inference-gateway" target="_blank" rel="noreferrer"><span>LLM · Routing · Observability</span><h3>LLM Inference Gateway</h3><p>Маршрутизация провайдеров, retry, timeout, rate limit, кэш и метрики.</p><i aria-hidden="true">↗</i></a>
+          <a class="repo-card reveal" href="https://github.com/sceuz/rag-evaluation-platform" target="_blank" rel="noreferrer">
+            <figure class="card-preview"><img src="assets/rag-preview.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Схема поиска релевантных фрагментов документов в RAG-системе"></figure>
+            <span>RAG · Vector Search · FastAPI</span><h3>RAG Evaluation Platform</h3><p>Ingestion, chunking, retrieval, цитаты и оценка качества ответов.</p><i aria-hidden="true">↗</i>
+          </a>
+          <a class="repo-card reveal" href="https://github.com/sceuz/agent-workflow-lab" target="_blank" rel="noreferrer">
+            <figure class="card-preview"><img src="assets/agent-preview.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Схема маршрутов, инструментов и проверок в агентном workflow"></figure>
+            <span>AI Agents · Guardrails · Tracing</span><h3>Agent Workflow Lab</h3><p>Планирование, вызов инструментов, review и трассируемые переходы состояния.</p><i aria-hidden="true">↗</i>
+          </a>
+          <a class="repo-card reveal" href="https://github.com/sceuz/llm-inference-gateway" target="_blank" rel="noreferrer">
+            <figure class="card-preview"><img src="assets/gateway-preview.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Схема маршрутизации запросов между моделями через LLM gateway"></figure>
+            <span>LLM · Routing · Observability</span><h3>LLM Inference Gateway</h3><p>Маршрутизация провайдеров, retry, timeout, rate limit, кэш и метрики.</p><i aria-hidden="true">↗</i>
+          </a>
         </div>
       </div>
     </section>
@@ -211,37 +220,189 @@
 
         <div class="case-grid">
           <article class="case-card case-featured reveal" data-category="ml">
-            <div class="case-top"><span class="case-number">01</span><span class="tag">Computer Vision</span></div>
-            <h3>CV-пайплайн для датасета из 5 млн изображений</h3>
-            <p class="case-summary">Участие в подготовке и разметке крупного набора изображений, обучении моделей компьютерного зрения и анализе ошибок.</p>
-            <dl class="case-facts">
-              <div><dt>Мой вклад</dt><dd>Подготовка и проверка данных, разметка, участие в обучении, анализ качества результатов</dd></div>
-              <div><dt>Инструменты</dt><dd>Python и инструменты компьютерного зрения</dd></div>
-              <div><dt>Масштаб</dt><dd>5 000 000 изображений</dd></div>
-            </dl>
-            <p class="confidential-note">Код и данные проекта не публикуются.</p>
+            <figure class="card-preview"><img src="assets/cv-dataset-preview.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Пайплайн подготовки, разметки и обучения на крупном датасете изображений"></figure>
+            <div class="case-featured-copy">
+              <div class="case-top"><span class="case-number">01</span><span class="tag">Computer Vision</span></div>
+              <h3>CV-пайплайн для датасета из 5 млн изображений</h3>
+              <p class="case-summary">Участие в подготовке и разметке крупного набора изображений, обучении моделей компьютерного зрения и анализе ошибок.</p>
+              <dl class="case-facts">
+                <div><dt>Мой вклад</dt><dd>Подготовка и проверка данных, разметка, обучение моделей, анализ результатов</dd></div>
+                <div><dt>Инструменты</dt><dd>Python и инструменты компьютерного зрения</dd></div>
+                <div><dt>Масштаб</dt><dd>5 000 000 изображений</dd></div>
+              </dl>
+              <p class="confidential-note">Код и данные проекта не публикуются.</p>
+            </div>
           </article>
 
           <article class="case-card reveal" data-category="ml">
+            <figure class="card-preview"><img src="assets/quantum-data-preview.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Лабораторный пайплайн разметки и анализа данных фотонного эксперимента"></figure>
             <div class="case-top"><span class="case-number">02</span><span class="tag">Data Quality</span></div>
             <h3>Разметка квантовых данных</h3>
-            <p>Выполнял разметку квантовых данных в лаборатории в рамках исследовательской работы.</p>
-            <p class="tech-line">Лабораторные данные · Data Annotation</p>
+            <p>Готовил и размечал экспериментальные данные в лаборатории, проверял качество выборки перед последующим анализом и обучением моделей.</p>
+            <p class="tech-line">Лабораторные данные · Annotation · Quality Control</p>
           </article>
 
           <article class="case-card reveal" data-category="ml">
+            <figure class="card-preview"><img src="assets/emg-classification-preview.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Многоканальные ЭМГ-сигналы проходят обработку и классификацию для управления кистью"></figure>
             <div class="case-top"><span class="case-number">03</span><span class="tag">Signal ML</span></div>
-            <h3>ЭМГ-управление бионической кистью</h3>
-            <p>Разработал датчики и модель на базе Transformer для классификации мышечных сигналов. Проект стал победителем программы «Студенческий стартап».</p>
-            <p class="tech-line">Signal Processing · Transformer · Embedded · Python</p>
+            <h3>Классификация многоканальных ЭМГ‑сигналов</h3>
+            <p>Разработал ML-пайплайн для мышечных сигналов. В него входят регистрация, фильтрация, сегментация временных рядов, обучение модели на базе Transformer, классификация команд и анализ ошибок.</p>
+            <p class="tech-line">sEMG · Signal Processing · Transformer · Python</p>
           </article>
 
           <article class="case-card reveal" data-category="backend">
+            <figure class="card-preview"><img src="assets/backend-preview.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Архитектура Python API с базой данных, фоновыми задачами и интеграциями"></figure>
             <div class="case-top"><span class="case-number">04</span><span class="tag">Python Backend</span></div>
             <h3>API, боты и интеграции</h3>
             <p>Разрабатывал REST API, Telegram- и Discord-ботов, парсеры, отдельные backend-сервисы и интеграции с внешними API.</p>
             <p class="tech-line">FastAPI · Django · Flask · PostgreSQL · SQLAlchemy · Docker · pytest</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research-section" id="research">
+      <div class="container">
+        <div class="section-head research-head reveal">
+          <div>
+            <p class="eyebrow">Research</p>
+            <h2>Научные работы</h2>
+          </div>
+          <p>Подтверждённый список статей, материалов конференций и научных школ за 2022–2026 годы. Работы сверены с eLIBRARY и официальными сборниками.</p>
+        </div>
+
+        <div class="research-metrics reveal" aria-label="Сводка научной деятельности">
+          <div><strong>30</strong><span>научных работ</span></div>
+          <div><strong>2022–2026</strong><span>период публикаций</span></div>
+          <div><strong>3</strong><span>статьи в журналах</span></div>
+          <div><strong>3</strong><span>регистрации программ</span></div>
+        </div>
+
+        <div class="research-subhead reveal">
+          <div><p class="eyebrow">Избранное</p><h3>ML, биосигналы и анализ данных</h3></div>
+          <a class="text-link" href="https://elibrary.ru/author_items.asp?authorid=1210243&amp;pubrole=100&amp;show_refs=1&amp;pubcat=risc" target="_blank" rel="noreferrer">Профиль eLIBRARY <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card reveal">
+            <div class="research-card-meta"><span>2026</span><span>ЭМГ · Mechatronics</span></div>
+            <h3>Программно-аппаратная обработка сигналов поверхностной электромиографии для адаптивного управления мехатронными устройствами</h3>
+            <p>«Информационные технологии в проектировании и производстве», № 2 (202), с. 43–46.</p>
+            <a href="https://doi.org/10.52190/2073-2597_2026_2_43" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="research-card reveal">
+            <div class="research-card-meta"><span>2025</span><span>ЭМГ · Deep Learning</span></div>
+            <h3>Нейронно-сетевой анализ многоканальных ЭМГ-сигналов</h3>
+            <p>Архитектуры, алгоритмы и применение в управлении протезами конечностей. «Вопросы защиты информации», № 2 (149), с. 34–41.</p>
+            <a href="https://doi.org/10.52190/2073-2600_2025_2_34" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="research-card reveal">
+            <div class="research-card-meta"><span>2025</span><span>CNN-LSTM · NIST</span></div>
+            <h3>Гибридная CNN-LSTM архитектура для оценки теста NIST на максимально длинную серию</h3>
+            <p>XII Международная научная Четаевская конференция, с. 360–363.</p>
+            <a href="https://elibrary.ru/item.asp?id=88929210" target="_blank" rel="noreferrer">eLIBRARY <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="research-card reveal">
+            <div class="research-card-meta"><span>2025</span><span>TCN-LSTM · NIST</span></div>
+            <h3>Гибридная модель TCN-LSTM для анализа статистической случайности бинарных последовательностей</h3>
+            <p>ПТиТТ и ОТТ, Уфа, с. 817–818.</p>
+            <a href="https://elibrary.ru/item.asp?id=88864909" target="_blank" rel="noreferrer">eLIBRARY <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="research-card reveal">
+            <div class="research-card-meta"><span>2024</span><span>EEG · Neural Networks</span></div>
+            <h3>Интеграция нейросетевых технологий в очках с ЭЭГ-датчиками</h3>
+            <p>Анализ мозговой активности и управление внешними устройствами. «Вопросы защиты информации», № 3 (146), с. 28–31.</p>
+            <a href="https://doi.org/10.52190/2073-2600_2024_3_28" target="_blank" rel="noreferrer">DOI <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="research-card reveal">
+            <div class="research-card-meta"><span>2022</span><span>Dataset · CNN</span></div>
+            <h3>Создание обучающей выборки для свёрточной нейронной сети при оценке степени случайности шумов</h3>
+            <p>XXVI Молодёжная научная школа «Когерентная оптика и оптическая спектроскопия», с. 48–51.</p>
+            <a href="https://elibrary.ru/item.asp?id=54280260" target="_blank" rel="noreferrer">eLIBRARY <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+
+        <details class="works-register reveal">
+          <summary>
+            <span><strong>Полный список</strong><small>30 научных работ по годам</small></span>
+            <span class="summary-action"><span class="summary-closed">Раскрыть</span><span class="summary-open">Скрыть</span></span>
+          </summary>
+          <div class="works-register-body">
+            <section class="year-group" aria-labelledby="works-2026">
+              <div class="year-heading"><h3 id="works-2026">2026</h3><span>1 работа</span></div>
+              <ol class="work-list">
+                <li>
+                  <span class="work-index">01</span>
+                  <div><h4><a href="https://doi.org/10.52190/2073-2597_2026_2_43" target="_blank" rel="noreferrer">Программно-аппаратная обработка сигналов поверхностной электромиографии для адаптивного управления мехатронными устройствами</a></h4><p>Гарафутдинов А. А. · «Информационные технологии в проектировании и производстве», № 2 (202), с. 43–46.</p></div>
+                </li>
+              </ol>
+            </section>
+
+            <section class="year-group" aria-labelledby="works-2025">
+              <div class="year-heading"><h3 id="works-2025">2025</h3><span>8 работ</span></div>
+              <ol class="work-list">
+                <li><span class="work-index">01</span><div><h4><a href="https://doi.org/10.52190/2073-2600_2025_2_34" target="_blank" rel="noreferrer">Нейронно-сетевой анализ многоканальных ЭМГ-сигналов: архитектуры, алгоритмы и применение в управлении протезами конечностей</a></h4><p>Гарафутдинов А. А. · «Вопросы защиты информации», № 2 (149), с. 34–41.</p></div></li>
+                <li><span class="work-index">02</span><div><h4><a href="https://elibrary.ru/item.asp?id=88929210" target="_blank" rel="noreferrer">Гибридная CNN-LSTM архитектура нейронной сети для оценки теста NIST на максимально длинную серию в бинарных последовательностях</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · XII Международная научная Четаевская конференция, с. 360–363.</p></div></li>
+                <li><span class="work-index">03</span><div><h4><a href="https://elibrary.ru/item.asp?id=83253069" target="_blank" rel="noreferrer">Классификация бинарных последовательностей с применением глубокой свёрточно-рекуррентной модели нейронной сети</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · «Прикладная электродинамика, фотоника и живые системы», с. 519–520.</p></div></li>
+                <li><span class="work-index">04</span><div><h4><a href="https://elibrary.ru/item.asp?id=83252950" target="_blank" rel="noreferrer">Функциональная парадигма создания бионического протеза кисти с винтовыми приводами и модульной электроникой</a></h4><p>Гарафутдинов А. А., Никишина Г. В. · «Прикладная электродинамика, фотоника и живые системы», с. 304–305.</p></div></li>
+                <li><span class="work-index">05</span><div><h4><a href="https://pureportal.spbu.ru/files/145128061/elibrary_83226052_17263009.pdf" target="_blank" rel="noreferrer">ЭМГ-система регистрации и адаптивной обработки миосигналов</a></h4><p>Гарафутдинов А. А., научный руководитель Никишина Г. В. · «Лобачевский 2.0», с. 53–56.</p></div></li>
+                <li><span class="work-index">06</span><div><h4><a href="https://lk.kai.ru/arhiv-konferencii/2025.pdf" target="_blank" rel="noreferrer">Обзор микросхемы ADS1299 для многоканальной регистрации биопотенциалов</a></h4><p>Гарафутдинов А. А. · XXVII Туполевские чтения, с. 1277–1280.</p></div></li>
+                <li><span class="work-index">07</span><div><h4><a href="https://elibrary.ru/item.asp?id=88864631" target="_blank" rel="noreferrer">ADS1299: аппаратное внедрение в задачах человеко-машинного интерфейса по sEMG</a></h4><p>Гарафутдинов А. А., Никишина Г. В. · ПТиТТ и ОТТ, Уфа, с. 411–412.</p></div></li>
+                <li><span class="work-index">08</span><div><h4><a href="https://elibrary.ru/item.asp?id=88864909" target="_blank" rel="noreferrer">Гибридная нейросетевая модель TCN-LSTM для анализа статистической случайности бинарных последовательностей на примере теста NIST Runs</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · ПТиТТ и ОТТ, Уфа, с. 817–818.</p></div></li>
+              </ol>
+            </section>
+
+            <section class="year-group" aria-labelledby="works-2024">
+              <div class="year-heading"><h3 id="works-2024">2024</h3><span>9 работ</span></div>
+              <ol class="work-list">
+                <li><span class="work-index">01</span><div><h4><a href="https://dspace.kpfu.ru/xmlui/bitstream/handle/net/185008/Garifullin_A.I._KOOS_2024.pdf?sequence=-1" target="_blank" rel="noreferrer">Формирование обучающей выборки для машинного обучения на основе модели теста NIST Longest Run случайной бинарной последовательности</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · XXVIII школа «Когерентная оптика и оптическая спектроскопия», с. 34–39.</p></div></li>
+                <li><span class="work-index">02</span><div><h4><a href="https://elibrary.ru/item.asp?id=73960447" target="_blank" rel="noreferrer">Применение свёрточных нейронных сетей для детектирования структурных аномалий в данных с использованием теста LongestRun</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · «Прикладная электродинамика, фотоника и живые системы», с. 598–599.</p></div></li>
+                <li><span class="work-index">03</span><div><h4><a href="https://elibrary.ru/item.asp?id=74498997" target="_blank" rel="noreferrer">Применение цифровых технологий в образовании на примере разработки системы управления макетом бионической руки</a></h4><p>Хакимзянова С. И., Гарафутдинов А. А. · «Прикладная электродинамика, фотоника и живые системы», с. 828–829.</p></div></li>
+                <li><span class="work-index">04</span><div><h4>Описание алгоритмического обеспечения системы распознавания жестов кисти руки на основе данных, полученных с камеры</h4><p>Гарафутдинов А. А., Никишина Г. В. · Всероссийский конкурс научных работ «Лобачевский — 2024», с. 53–54.</p></div></li>
+                <li><span class="work-index">05</span><div><h4><a href="https://doi.org/10.52190/2073-2600_2024_3_28" target="_blank" rel="noreferrer">Интеграция нейросетевых технологий в очках с ЭЭГ-датчиками для анализа мозговой активности и управления внешними устройствами</a></h4><p>Гарафутдинов А. А., Хакимзянова С. И. · «Вопросы защиты информации», № 3 (146), с. 28–31.</p></div></li>
+                <li><span class="work-index">06</span><div><h4><a href="https://elibrary.ru/item.asp?id=74499005" target="_blank" rel="noreferrer">Основные шаги при разработке системы дистанционного управления макетом бионической руки с помощью инфракрасного излучения</a></h4><p>Гарафутдинов А. А., Хакимзянова С. И. · «Прикладная электродинамика, фотоника и живые системы», с. 848–849.</p></div></li>
+                <li><span class="work-index">07</span><div><h4><a href="https://elibrary.ru/item.asp?id=75254349" target="_blank" rel="noreferrer">Разработка аппаратной части автономной системы поиска предметов на базе беспроводных меток</a></h4><p>Хакимзянова С. И., Гарафутдинов А. А., Никишина Г. В. · ПТиТТ-2024, с. 383–384.</p></div></li>
+                <li><span class="work-index">08</span><div><h4><a href="https://elibrary.ru/item.asp?id=75254350" target="_blank" rel="noreferrer">Разработка программной части автономной системы поиска предметов на базе беспроводных меток</a></h4><p>Хакимзянова С. И., Гарафутдинов А. А., Никишина Г. В. · ПТиТТ-2024, с. 385–386.</p></div></li>
+                <li><span class="work-index">09</span><div><h4><a href="https://science.kuzstu.ru/wp-content/Events/Conference/Other/2024/SIF_2024/pages/Articles/104.pdf" target="_blank" rel="noreferrer">Neural Networks in English Language Processing</a></h4><p>Garafutdinov A. A. · Международный молодёжный научный форум «Шаг в будущее», с. 104.1–104.3.</p></div></li>
+              </ol>
+            </section>
+
+            <section class="year-group" aria-labelledby="works-2023">
+              <div class="year-heading"><h3 id="works-2023">2023</h3><span>11 работ</span></div>
+              <ol class="work-list">
+                <li><span class="work-index">01</span><div><h4><a href="https://elibrary.ru/item.asp?id=59498689" target="_blank" rel="noreferrer">Оценка равномерности двумерного изображения случайного шума с применением нейронной сети</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · «Прикладная электродинамика, фотоника и живые системы», с. 621–622.</p></div></li>
+                <li><span class="work-index">02</span><div><h4><a href="https://elibrary.ru/item.asp?id=63869019" target="_blank" rel="noreferrer">Оптимальные параметры искусственной нейронной сети при решении задачи оценки случайности временного ряда</a></h4><p>Гарафутдинов А. А. · XXVI Туполевские чтения, с. 1200–1204.</p></div></li>
+                <li><span class="work-index">03</span><div><h4><a href="https://elibrary.ru/item.asp?id=68492460" target="_blank" rel="noreferrer">Анализ влияния параметров нейронной свёрточной сети на эффективность оценки распределения последовательностей единиц</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · XXVII школа «Когерентная оптика и оптическая спектроскопия», с. 37–40.</p></div></li>
+                <li><span class="work-index">04</span><div><h4><a href="https://elibrary.ru/item.asp?id=65243245" target="_blank" rel="noreferrer">Анализ гиперпараметров свёрточной нейронной сети для тестирования распределения последовательностей единиц случайной бинарной выборки</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · ТТТ-2023, с. 180–181.</p></div></li>
+                <li><span class="work-index">05</span><div><h4><a href="https://elibrary.ru/item.asp?id=55937531" target="_blank" rel="noreferrer">Исследование эффективности нейронной свёрточной сети для оценки распределения последовательностей единиц</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · «Нигматуллинские чтения — 2023», с. 438–441.</p></div></li>
+                <li><span class="work-index">06</span><div><h4><a href="https://elibrary.ru/item.asp?id=65241563" target="_blank" rel="noreferrer">Обзор технологий распознавания лиц и их применение в инженерном деле</a></h4><p>Гарафутдинов А. А., Никишина Г. В. · ТТТ-2023, с. 341–342.</p></div></li>
+                <li><span class="work-index">07</span><div><h4>Распознавание лиц для идентификации пилота и пассажиров на борту самолёта с помощью нейронных сетей</h4><p>Гарафутдинов А. А., Никишина Г. В. · «Авиация будущего: тренды, вызовы и возможности», с. 402–405.</p></div></li>
+                <li><span class="work-index">08</span><div><h4><a href="https://laser-optics.ru/%D0%A1%D0%91%D0%9E%D0%A0%D0%9D%D0%98%D0%9A%202023.pdf" target="_blank" rel="noreferrer">Оптимизация параметров свёрточной нейронной сети для тестирования распределения последовательностей единиц случайной бинарной выборки</a></h4><p>Гарафутдинов А. А., Сибгатуллин М. Э., Арсланов Н. М. · XXI Самарская конкурс-конференция по оптике, с. 186–187.</p></div></li>
+                <li><span class="work-index">09</span><div><h4><a href="https://elibrary.ru/item.asp?id=55817167" target="_blank" rel="noreferrer">Использование нейронных сетей в математике</a></h4><p>Гарафутдинов А. А. · III Региональная молодёжная научная конференция, с. 20–21.</p></div></li>
+                <li><span class="work-index">10</span><div><h4>Интернет вещей и его роль в изучении английского языка</h4><p>Гарафутдинов А. А. · «Перспективы исследования в межкультурной коммуникации, лингвистике и лингводидактике», с. 22–24.</p></div></li>
+                <li><span class="work-index">11</span><div><h4><a href="https://kuzstu.su/dmdocuments/INPK/12INPK_Sbornic-2023/pages/%D0%A1%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%203/316.pdf" target="_blank" rel="noreferrer">Использование информационных технологий при изучении английского языка</a></h4><p>Гарафутдинов А. А. · XII Международная научно-практическая конференция, с. 316.1–316.4.</p></div></li>
+              </ol>
+            </section>
+
+            <section class="year-group" aria-labelledby="works-2022">
+              <div class="year-heading"><h3 id="works-2022">2022</h3><span>1 работа</span></div>
+              <ol class="work-list">
+                <li><span class="work-index">01</span><div><h4><a href="https://elibrary.ru/item.asp?id=54280260" target="_blank" rel="noreferrer">Создание обучающей выборки для свёрточной нейронной сети при оценке степени случайности шумов</a></h4><p>Гарафутдинов А. А., Камалов А. И., Сибгатуллин М. Э., Гилязов Л. Р. · XXVI школа «Когерентная оптика и оптическая спектроскопия», с. 48–51.</p></div></li>
+              </ol>
+            </section>
+          </div>
+        </details>
+
+        <div class="research-results">
+          <div class="research-subhead reveal">
+            <div><p class="eyebrow">Подтверждённые результаты</p><h3>Программы и исследовательские проекты</h3></div>
+          </div>
+          <div class="result-grid">
+            <article class="result-card reveal"><span>Программа для ЭВМ · 2025</span><h3>Измерение углов сгибания пальцев по видеопотоку</h3><p>Свидетельство № 2025614632. Авторы А. А. Гарафутдинов и Г. В. Никишина.</p><a href="https://elibrary.ru/item.asp?id=80525409" target="_blank" rel="noreferrer">Запись <span aria-hidden="true">↗</span></a></article>
+            <article class="result-card reveal"><span>Программы для ЭВМ · 2026</span><h3>Обработка ЭМГ и позиционирование фаланг</h3><p>Свидетельства № 2026611013 и № 2026611014, зарегистрированы 16 января 2026 года.</p><a href="https://www1.fips.ru/registers-doc-view/fips_servlet?DB=EVM&amp;DocNumber=2026611013&amp;TypeFile=html" target="_blank" rel="noreferrer">ФИПС <span aria-hidden="true">↗</span></a></article>
+            <article class="result-card reveal"><span>Студенческий стартап · V очередь</span><h3>Система распознавания мышечных сигналов для бионической руки</h3><p>Проект вошёл в официальный список победителей программы.</p><a href="https://fasie.ru/upload/docs/%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%BF%D0%BE%D0%B1%D0%B5%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9%20%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81%D0%B0%20%C2%AB%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B0%D0%BF%C2%BB%20%28%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%20V%29.pdf" target="_blank" rel="noreferrer">Официальный список <span aria-hidden="true">↗</span></a></article>
+            <article class="result-card reveal"><span>Всероссийский инженерный конкурс · 2025/26</span><h3>Нейросетевая система анализа ЭМГ-сигналов</h3><p>Полуфиналист направления «Машинное обучение и искусственный интеллект».</p><a href="https://vikrf.ru/rezultaty-otborochnogo-etapa-vserossijskogo-inzhenernogo-konkursa-25-26/" target="_blank" rel="noreferrer">Результаты <span aria-hidden="true">↗</span></a></article>
+          </div>
         </div>
       </div>
     </section>
@@ -268,28 +429,18 @@
       <div class="container two-col">
         <div class="section-title-sticky reveal">
           <p class="eyebrow">Опыт</p>
-          <h2>ML как основной трек</h2>
-          <p>Robotics и аппаратная разработка показаны как дополнительный инженерный контекст.</p>
+          <h2>Исследовательский и инженерный опыт</h2>
+          <p>Три года работы с ML, сигналами, computer vision и экспериментальными данными. Робототехника показана как дополнительный инженерный опыт.</p>
         </div>
         <div class="timeline">
           <article class="timeline-item reveal">
-            <div class="timeline-meta"><span>2025 — сейчас</span><span>1 г. 2 мес.</span></div>
-            <h3>ML / Robotics Developer</h3>
-            <p class="company">ТТК Диджитал</p>
-            <ul>
-              <li>Обучение, проверка и анализ ML-моделей на Python с PyTorch и TensorFlow/Keras.</li>
-              <li>Работа с данными, сигналами, компьютерным зрением и результатами экспериментов.</li>
-              <li>Дополнительно NVIDIA Isaac Sim / Isaac Lab, sim-to-real, датчики и микроконтроллеры.</li>
-            </ul>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-meta"><span>2022 — сейчас</span><span>Лаборатория</span></div>
-            <h3>Лаборант</h3>
+            <div class="timeline-meta"><span>2022 — сейчас</span><span>3 года</span></div>
+            <h3>ML и исследовательская работа</h3>
             <p class="company">КНИТУ-КАИ им. А. Н. Туполева</p>
             <ul>
-              <li>Полный цикл ML для классификации, анализа данных и обработки сигналов.</li>
-              <li>ЭМГ-сигналы, computer vision и интеграция алгоритмов в технические системы.</li>
-              <li>Разметка квантовых данных для дальнейшего исследования.</li>
+              <li>Подготовка данных, предобработка, обучение, настройка моделей, оценка качества и анализ ошибок.</li>
+              <li>Классификация ЭМГ-сигналов, computer vision и интеграция алгоритмов в технические системы.</li>
+              <li>Разметка квантовых данных и подготовка выборок для исследований.</li>
             </ul>
           </article>
           <article class="timeline-item reveal">
@@ -308,10 +459,10 @@
         <div class="skills-grid">
           <article class="skill-card reveal"><span>01</span><h3>Machine Learning</h3><p>Python, PyTorch, TensorFlow/Keras, Transformers, scikit-learn, NumPy, SciPy, обучение и оценка моделей</p></article>
           <article class="skill-card reveal"><span>02</span><h3>Computer Vision</h3><p>OpenCV, YOLO, MediaPipe, подготовка датасетов, разметка, контроль качества и анализ ошибок</p></article>
-          <article class="skill-card reveal"><span>03</span><h3>Robotics & Simulation</h3><p>NVIDIA Isaac Sim, Isaac Lab, Newton, Reinforcement Learning, checkpoint-модели, sim-to-real, датчики и микроконтроллеры</p></article>
+          <article class="skill-card reveal"><span>03</span><h3>Robotics &amp; Simulation</h3><p>NVIDIA Isaac Sim, Isaac Lab, Newton, Reinforcement Learning, checkpoint-модели, sim-to-real, датчики и микроконтроллеры</p></article>
           <article class="skill-card reveal"><span>04</span><h3>LLM Systems</h3><p>RAG, AI Agents, vector search, routing, evaluation, guardrails и tracing</p></article>
-          <article class="skill-card reveal"><span>05</span><h3>Signals & Data</h3><p>ЭМГ, временные ряды, классификация сигналов, предобработка, выделение признаков, MATLAB и контроль качества данных</p></article>
-          <article class="skill-card reveal"><span>06</span><h3>ML Backend & Delivery</h3><p>FastAPI, Django, Flask, REST API, PostgreSQL, SQLAlchemy, Docker, pytest, Git и Linux</p></article>
+          <article class="skill-card reveal"><span>05</span><h3>Signals &amp; Data</h3><p>ЭМГ, временные ряды, классификация сигналов, предобработка, выделение признаков, MATLAB и контроль качества данных</p></article>
+          <article class="skill-card reveal"><span>06</span><h3>ML Backend &amp; Delivery</h3><p>FastAPI, Django, Flask, REST API, PostgreSQL, SQLAlchemy, Docker, pytest, Git и Linux</p></article>
         </div>
       </div>
     </section>
@@ -338,6 +489,6 @@
     <div class="container"><span>© 2026 Айзат Гарафутдинов</span><a href="#top">Наверх ↑</a></div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

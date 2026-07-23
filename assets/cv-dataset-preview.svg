@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Современная схема обработки крупного датасета изображений</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11171c"/><stop offset="1" stop-color="#20303a"/></linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#edf3f5" stroke-opacity=".04"/></pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/><rect width="1200" height="675" rx="34" fill="url(#grid)"/>
+  <g transform="translate(58 94)">
+    <g fill="#f3f1ec" fill-opacity=".09" stroke="#f3f1ec" stroke-opacity=".15">
+      <rect width="138" height="102" rx="14"/><rect x="154" width="138" height="102" rx="14"/><rect x="308" width="138" height="102" rx="14"/>
+      <rect y="118" width="138" height="102" rx="14"/><rect x="154" y="118" width="138" height="102" rx="14"/><rect x="308" y="118" width="138" height="102" rx="14"/>
+      <rect y="236" width="138" height="102" rx="14"/><rect x="154" y="236" width="138" height="102" rx="14"/><rect x="308" y="236" width="138" height="102" rx="14"/>
+      <rect y="354" width="138" height="102" rx="14"/><rect x="154" y="354" width="138" height="102" rx="14"/><rect x="308" y="354" width="138" height="102" rx="14"/>
+    </g>
+    <g fill="#6f98a8" fill-opacity=".35">
+      <path d="M18 84l34-38 25 23 25-36 20 51z"/><circle cx="224" cy="44" r="21"/><path d="M172 84l32-26 23 18 28-31 19 39z"/>
+      <path d="M326 84l31-45 28 34 21-24 22 35z"/><circle cx="70" cy="162" r="24"/><path d="M172 202l38-49 29 28 25-42 10 63z"/>
+      <path d="M326 202l27-33 24 19 24-43 27 37v20z"/><path d="M18 320l34-38 25 23 25-36 20 51z"/>
+      <circle cx="224" cy="280" r="21"/><path d="M326 320l31-45 28 34 21-24 22 35z"/>
+      <circle cx="70" cy="398" r="24"/><path d="M172 438l38-49 29 28 25-42 10 63z"/><path d="M326 438l27-33 24 19 24-43 27 37v20z"/>
+    </g>
+    <g fill="none" stroke="#d7794e" stroke-width="4"><rect x="164" y="128" width="118" height="82" rx="10"/><rect x="10" y="246" width="118" height="82" rx="10"/><rect x="318" y="364" width="118" height="82" rx="10"/></g>
+  </g>
+  <path d="M524 337h78" stroke="#d7794e" stroke-width="7" stroke-linecap="round"/><path d="M582 317l23 20-23 20" fill="none" stroke="#d7794e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(628 148)">
+    <rect width="220" height="378" rx="32" fill="#f3f1ec" fill-opacity=".075" stroke="#6f98a8" stroke-opacity=".5"/>
+    <rect x="30" y="30" width="160" height="212" rx="20" fill="#11191f"/>
+    <path d="M52 211l37-52 31 29 38-70 18 93z" fill="#355f70"/>
+    <rect x="61" y="87" width="75" height="102" rx="8" fill="none" stroke="#d7794e" stroke-width="5"/>
+    <g fill="#f3f1ec" fill-opacity=".28"><rect x="30" y="274" width="160" height="10" rx="5"/><rect x="30" y="300" width="124" height="10" rx="5"/><rect x="30" y="326" width="144" height="10" rx="5"/></g>
+  </g>
+  <g transform="translate(904 132)">
+    <rect width="238" height="412" rx="28" fill="#f3f1ec"/>
+    <g fill="#355f70" fill-opacity=".12"><rect x="28" y="31" width="182" height="140" rx="18"/><rect x="28" y="196" width="182" height="188" rx="18"/></g>
+    <g fill="#355f70"><circle cx="64" cy="82" r="8"/><circle cx="96" cy="61" r="6"/><circle cx="125" cy="104" r="9"/><circle cx="164" cy="76" r="7"/><circle cx="184" cy="126" r="6"/></g>
+    <path d="M50 350V225M50 350h138" stroke="#12171c" stroke-opacity=".3" stroke-width="3"/>
+    <path d="M66 320l30-38 31 15 27-51 27 18" fill="none" stroke="#a45738" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
