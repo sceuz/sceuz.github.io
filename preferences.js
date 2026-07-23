@@ -39,7 +39,7 @@
     'исследовательского и инженерного опыта': 'of research and engineering experience',
     'научных работ': 'research papers',
     'LLM, RAG и AI Agents': 'LLMs, RAG, and AI Agents',
-    'Рабочие Python-системы с API, тестами, Docker-конфигурацией и воспроизводимым офлайн-режимом без платных ключей.': 'Production-ready Python systems with APIs, tests, Docker configuration, and a reproducible offline mode that requires no paid API keys.',
+    'Рабочие Python-системы с API, тестами, Docker-конфигурацией и воспроизводимым офлайн-режимом без платных ключей.': 'Functional Python systems with APIs, tests, Docker configuration, and a reproducible offline mode that requires no paid API keys.',
     'Схема поиска релевантных фрагментов документов в RAG-системе': 'Diagram of relevant document passage retrieval in a RAG system',
     'Ingestion, chunking, retrieval, цитаты и оценка качества ответов.': 'Ingestion, chunking, retrieval, citations, and answer quality evaluation.',
     'Схема маршрутов, инструментов и проверок в агентном workflow': 'Diagram of routes, tools, and checks in an agent workflow',
@@ -71,6 +71,7 @@
     'Рендер 3D-модели бионической кисти с подвижными пальцами': 'Render of a 3D bionic hand model with articulated fingers',
     '03 / Проект': '03 / Project',
     'Бионическая кисть': 'Bionic Hand',
+    'ЭМГ · Transformer · Embedded': 'EMG · Transformer · Embedded',
     'Победитель': 'Winner',
     'программа «Студенческий стартап»': 'Student Startup program',
     'Управление кистью по мышечным сигналам': 'Hand Control Using Muscle Signals',
@@ -100,7 +101,7 @@
     'Архитектура Python API с базой данных, фоновыми задачами и интеграциями': 'Python API architecture with a database, background tasks, and integrations',
     'API, боты и интеграции': 'APIs, Bots, and Integrations',
     'Разрабатывал REST API, Telegram- и Discord-ботов, парсеры, отдельные backend-сервисы и интеграции с внешними API.': 'I developed REST APIs, Telegram and Discord bots, parsers, standalone backend services, and integrations with external APIs.',
-    'Подтверждённый список статей, материалов конференций и научных школ за 2022–2026 годы. Работы сверены с eLIBRARY и официальными сборниками.': 'A verified list of journal articles, conference proceedings, and research school publications from 2022 to 2026. The records were cross-checked against eLIBRARY and official proceedings. Official titles are shown in the original publication language.',
+    'Подтверждённый список статей, материалов конференций и научных школ за 2022–2026 годы. Работы сверены с eLIBRARY и официальными сборниками.': 'A verified list of journal articles, conference proceedings, and research school proceedings from 2022 to 2026. The records were cross-checked against eLIBRARY and official proceedings. Official titles are shown in the original publication language.',
     'Сводка научной деятельности': 'Research activity summary',
     'период публикаций': 'publication period',
     'статьи в журналах': 'journal articles',
@@ -172,7 +173,7 @@
     'Английский язык в инженерной и академической среде': 'English for Engineering and Academic Environments',
     'Университет Иннополис': 'Innopolis University',
     'Разработка 2D-игр на Python': '2D Game Development with Python',
-    'Практический курс объёмом 144 академических часа: Python, ООП, игровой цикл и интерактивная логика': 'A 144-academic-hour practical course covering Python, object-oriented programming, the game loop, and interactive logic.',
+    'Практический курс объёмом 144 академических часа: Python, ООП, игровой цикл и интерактивная логика': 'A 144-hour practical course covering Python, object-oriented programming, the game loop, and interactive logic.',
     'Матрица компетенций': 'Competency Matrix',
     'Python, PyTorch, TensorFlow/Keras, Transformers, scikit-learn, NumPy, SciPy, обучение и оценка моделей': 'Python, PyTorch, TensorFlow/Keras, Transformers, scikit-learn, NumPy, SciPy, model training and evaluation',
     'OpenCV, YOLO, MediaPipe, подготовка датасетов, разметка, контроль качества и анализ ошибок': 'OpenCV, YOLO, MediaPipe, dataset preparation, annotation, quality control, and error analysis',
@@ -225,7 +226,9 @@
     });
 
     document.querySelectorAll('.research-grid h3, .research-grid article > p, .work-list h4, .work-list p')
-      .forEach((element) => element.setAttribute('lang', 'ru'));
+      .forEach((element) => {
+        element.setAttribute('lang', /[А-Яа-яЁё]/.test(element.textContent) ? 'ru' : 'en');
+      });
   };
 
   const getLanguage = () => root.dataset.language === 'en' ? 'en' : 'ru';
@@ -239,7 +242,7 @@
     const languageLabel = document.querySelector('[data-language-label]');
     const themeToggle = document.querySelector('[data-theme-toggle]');
     if (languageLabel) languageLabel.textContent = language === 'en' ? 'RU' : 'EN';
-    if (languageToggle) languageToggle.setAttribute('aria-label', language === 'en' ? 'Переключить на русский' : 'Switch to English');
+    if (languageToggle) languageToggle.setAttribute('aria-label', language === 'en' ? 'Switch to Russian' : 'Переключить на английский');
     if (themeToggle) {
       themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
       themeToggle.setAttribute(
@@ -294,7 +297,7 @@
   let queryLanguage = '';
   try { queryLanguage = new URLSearchParams(window.location.search).get('lang') || ''; } catch {}
   const initialLanguage = queryLanguage === 'en' || queryLanguage === 'ru' ? queryLanguage : getLanguage();
-  applyLanguage(initialLanguage, { persist: true, updateUrl: queryLanguage === 'en' || queryLanguage === 'ru' });
+  applyLanguage(initialLanguage, { persist: true, updateUrl: true });
   applyTheme(getTheme(), { persist: false });
 
   document.querySelector('[data-language-toggle]')?.addEventListener('click', () => {

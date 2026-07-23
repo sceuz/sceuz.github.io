@@ -40,6 +40,7 @@ menuToggle?.addEventListener('click', () => {
   document.body.classList.toggle('menu-open', !isOpen);
   const menuLabel = menuToggle.querySelector('.sr-only');
   if (menuLabel) menuLabel.textContent = translate(isOpen ? 'Открыть меню' : 'Закрыть меню');
+  if (!isOpen) window.requestAnimationFrame(() => navLinks[0]?.focus());
 });
 
 navLinks.forEach((link) => link.addEventListener('click', () => {
@@ -70,8 +71,9 @@ if ('IntersectionObserver' in window) {
 
 const counters = [...document.querySelectorAll('[data-count]')];
 const setCounterValue = (element, value) => {
+  const isEnglish = window.portfolioI18n?.getLanguage() === 'en';
   const formatted = element.dataset.countFormat === 'spaces'
-    ? Math.round(value).toLocaleString('ru-RU').replace(/\u00a0/g, ' ')
+    ? Math.round(value).toLocaleString(isEnglish ? 'en-US' : 'ru-RU').replace(/\u00a0/g, ' ')
     : String(Math.round(value));
   element.textContent = `${formatted}${element.dataset.countSuffix || ''}`;
 };
@@ -152,11 +154,18 @@ const copyStatus = document.querySelector('[data-copy-status]');
 copyButton?.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(copyButton.dataset.copy);
+    if (copyStatus) copyStatus.dataset.messageKey = 'Скопировано';
     if (copyStatus) copyStatus.textContent = translate('Скопировано');
   } catch {
+    if (copyStatus) copyStatus.dataset.messageKey = 'Скопируйте ayzatg@yandex.ru';
     if (copyStatus) copyStatus.textContent = translate('Скопируйте ayzatg@yandex.ru');
   }
-  window.setTimeout(() => { if (copyStatus) copyStatus.textContent = ''; }, 2500);
+  window.setTimeout(() => {
+    if (copyStatus) {
+      copyStatus.textContent = '';
+      delete copyStatus.dataset.messageKey;
+    }
+  }, 2500);
 });
 
 window.addEventListener('portfolio:languagechange', () => {
@@ -173,6 +182,7 @@ window.addEventListener('portfolio:languagechange', () => {
   if (menuLabel) {
     menuLabel.textContent = translate(nav?.classList.contains('is-open') ? 'Закрыть меню' : 'Открыть меню');
   }
+  if (copyStatus?.dataset.messageKey) copyStatus.textContent = translate(copyStatus.dataset.messageKey);
 });
 
 document.querySelector('.works-register')?.addEventListener('toggle', requestViewportUpdate);
